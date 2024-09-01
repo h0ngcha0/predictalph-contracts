@@ -149,7 +149,7 @@ export async function bid(
   };
 
   if (tokenIdToVote == ALPH_TOKEN_ID && tokenIdToHodl == ALPH_TOKEN_ID) {
-    data.attoAlphAmount = amount + 2n * DUST_AMOUNT + amountHodl;
+    data.attoAlphAmount = amount + 2n * DUST_AMOUNT + amountHodl + MINIMAL_CONTRACT_DEPOSIT;
     data.tokens = [];
   } else if (
     tokenIdToHodl !== ALPH_TOKEN_ID &&
